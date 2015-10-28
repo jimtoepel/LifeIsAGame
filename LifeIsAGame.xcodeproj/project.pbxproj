@@ -15,6 +15,9 @@
 		B1F100151BDF3F2300F8CA91 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B1F100131BDF3F2300F8CA91 /* LaunchScreen.storyboard */; };
 		B1F100201BDF3F2300F8CA91 /* LifeIsAGameTests.m in Sources */ = {isa = PBXBuildFile; fileRef = B1F1001F1BDF3F2300F8CA91 /* LifeIsAGameTests.m */; };
 		B1F1002B1BDF3F2300F8CA91 /* LifeIsAGameUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = B1F1002A1BDF3F2300F8CA91 /* LifeIsAGameUITests.m */; };
+		B1F1003B1BDF44A500F8CA91 /* play.png in Resources */ = {isa = PBXBuildFile; fileRef = B1F1003A1BDF44A500F8CA91 /* play.png */; };
+		B1F100411BE0762700F8CA91 /* Pyre Light.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = B1F100401BE0762700F8CA91 /* Pyre Light.mp3 */; };
+		B1F100441BE076A900F8CA91 /* FUNAudioPlayer.m in Sources */ = {isa = PBXBuildFile; fileRef = B1F100431BE076A900F8CA91 /* FUNAudioPlayer.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +54,10 @@
 		B1F100261BDF3F2300F8CA91 /* LifeIsAGameUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LifeIsAGameUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		B1F1002A1BDF3F2300F8CA91 /* LifeIsAGameUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LifeIsAGameUITests.m; sourceTree = "<group>"; };
 		B1F1002C1BDF3F2300F8CA91 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B1F1003A1BDF44A500F8CA91 /* play.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = play.png; path = ../../../../Downloads/play.png; sourceTree = "<group>"; };
+		B1F100401BE0762700F8CA91 /* Pyre Light.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "Pyre Light.mp3"; sourceTree = "<group>"; };
+		B1F100421BE076A900F8CA91 /* FUNAudioPlayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FUNAudioPlayer.h; path = FUNAudioPlayer/FUNAudioPlayer.h; sourceTree = "<group>"; };
+		B1F100431BE076A900F8CA91 /* FUNAudioPlayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FUNAudioPlayer.m; path = FUNAudioPlayer/FUNAudioPlayer.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -91,6 +98,7 @@
 		B1F100041BDF3F2300F8CA91 /* LifeIsAGame */ = {
 			isa = PBXGroup;
 			children = (
+				B1F1003C1BDF459800F8CA91 /* AudioPlayer */,
 				B1F100081BDF3F2300F8CA91 /* AppDelegate.h */,
 				B1F100091BDF3F2300F8CA91 /* AppDelegate.m */,
 				B1F1000B1BDF3F2300F8CA91 /* ViewController.h */,
@@ -107,7 +115,9 @@
 		B1F100051BDF3F2300F8CA91 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				B1F100401BE0762700F8CA91 /* Pyre Light.mp3 */,
 				B1F100061BDF3F2300F8CA91 /* main.m */,
+				B1F1003A1BDF44A500F8CA91 /* play.png */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -128,6 +138,15 @@
 				B1F1002C1BDF3F2300F8CA91 /* Info.plist */,
 			);
 			path = LifeIsAGameUITests;
+			sourceTree = "<group>";
+		};
+		B1F1003C1BDF459800F8CA91 /* AudioPlayer */ = {
+			isa = PBXGroup;
+			children = (
+				B1F100421BE076A900F8CA91 /* FUNAudioPlayer.h */,
+				B1F100431BE076A900F8CA91 /* FUNAudioPlayer.m */,
+			);
+			name = AudioPlayer;
 			sourceTree = "<group>";
 		};
 		B1F1FFF91BDF3F2300F8CA91 = {
@@ -245,7 +264,9 @@
 			files = (
 				B1F100151BDF3F2300F8CA91 /* LaunchScreen.storyboard in Resources */,
 				B1F100121BDF3F2300F8CA91 /* Assets.xcassets in Resources */,
+				B1F1003B1BDF44A500F8CA91 /* play.png in Resources */,
 				B1F100101BDF3F2300F8CA91 /* Main.storyboard in Resources */,
+				B1F100411BE0762700F8CA91 /* Pyre Light.mp3 in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -289,6 +310,7 @@
 				B1F1000D1BDF3F2300F8CA91 /* ViewController.m in Sources */,
 				B1F1000A1BDF3F2300F8CA91 /* AppDelegate.m in Sources */,
 				B1F100071BDF3F2300F8CA91 /* main.m in Sources */,
+				B1F100441BE076A900F8CA91 /* FUNAudioPlayer.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -489,6 +511,7 @@
 				B1F100311BDF3F2300F8CA91 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		B1F100321BDF3F2300F8CA91 /* Build configuration list for PBXNativeTarget "LifeIsAGameTests" */ = {
 			isa = XCConfigurationList;
@@ -497,6 +520,7 @@
 				B1F100341BDF3F2300F8CA91 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		B1F100351BDF3F2300F8CA91 /* Build configuration list for PBXNativeTarget "LifeIsAGameUITests" */ = {
 			isa = XCConfigurationList;
@@ -505,6 +529,7 @@
 				B1F100371BDF3F2300F8CA91 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		B1F1FFFD1BDF3F2300F8CA91 /* Build configuration list for PBXProject "LifeIsAGame" */ = {
 			isa = XCConfigurationList;
