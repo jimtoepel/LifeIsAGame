@@ -7,8 +7,22 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "FUNAudioPlayer.h"
 
 @interface ViewController : UIViewController
+
+@property (nonatomic, strong) FUNAudioPlayer *audioPlayer;
+
+@property (weak, nonatomic) IBOutlet UISlider *currentTimeSlider;
+@property (weak, nonatomic) IBOutlet UIButton *playButton;
+@property (weak, nonatomic) IBOutlet UILabel *duration;
+@property (weak, nonatomic) IBOutlet UILabel *timeElapsed;
+
+@property BOOL isPaused;
+@property BOOL scrubbing;
+
+@property NSTimer *timer;
+
 
 
 @end

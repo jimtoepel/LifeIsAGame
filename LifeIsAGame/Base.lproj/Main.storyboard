@@ -21,10 +21,16 @@
                                 <rect key="frame" x="73" y="154" width="71" height="66"/>
                                 <animations/>
                                 <state key="normal" title="Play" image="play.png"/>
+                                <connections>
+                                    <action selector="playAudioPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="trA-cF-ruG"/>
+                                </connections>
                             </button>
                             <slider opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="PMC-2P-5Z4">
                                 <rect key="frame" x="200" y="172" width="212" height="31"/>
                                 <animations/>
+                                <connections>
+                                    <action selector="userIsScrubbing:" destination="BYZ-38-t0r" eventType="valueChanged" id="lJv-vf-0Gj"/>
+                                </connections>
                             </slider>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="MM:SS" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="26H-8J-Wx3">
                                 <rect key="frame" x="418" y="176" width="55" height="21"/>
@@ -44,6 +50,12 @@
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
+                    <connections>
+                        <outlet property="currentTimeSlider" destination="PMC-2P-5Z4" id="0mi-LY-cba"/>
+                        <outlet property="duration" destination="26H-8J-Wx3" id="Gq7-C4-yM3"/>
+                        <outlet property="playButton" destination="wdu-3d-dGL" id="s15-ch-Ech"/>
+                        <outlet property="timeElapsed" destination="ACR-JZ-ES5" id="DF4-9R-itl"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
