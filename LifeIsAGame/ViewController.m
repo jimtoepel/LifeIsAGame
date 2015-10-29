@@ -17,14 +17,14 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.audioPlayer = [[FUNAudioPlayer alloc] init];
-    [self setupAudioPlayer:@"audiofile"];
+    [self setupAudioPlayer:@"PyreLight"];
     // Do any additional setup after loading the view, typically from a nib.
 }
 
 
 /*
  * Setup the AudioPlayer with
- * Filename and Fileextension like mp3
+ * Filename and FileExtension like mp3
  * Loading audioFile and sets the time tables
  */
 
