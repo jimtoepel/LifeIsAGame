@@ -17,10 +17,10 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wdu-3d-dGL">
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wdu-3d-dGL" userLabel="Play Button">
                                 <rect key="frame" x="20" y="28" width="72" height="72"/>
                                 <animations/>
-                                <state key="normal" title="Play" image="audioplayer_play.png"/>
+                                <state key="normal" backgroundImage="audioplayer_play.png"/>
                                 <connections>
                                     <action selector="playAudioPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Rfb-Pc-3Vo"/>
                                 </connections>

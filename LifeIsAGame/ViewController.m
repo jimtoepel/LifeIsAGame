@@ -59,7 +59,7 @@
     [self.timer invalidate];
     // play audio for the first time or if pause was pressed
     if (!self.isPaused) {
-        [self.playButton setBackgroundImage:[UIImage imageNamed:@"audioplayer_pause.png"] forState:UIControlStateNormal];
+        [self.playButton setBackgroundImage:[UIImage imageNamed:@"audioplayer_paused.png"] forState:UIControlStateNormal];
         
         // start a time to update the time label display
         self.timer = [NSTimer scheduledTimerWithTimeInterval:1.0
@@ -68,8 +68,13 @@
                                                    userInfo:nil
                                                     repeats:YES];
         [self.audioPlayer playAudio];
-        self.isPaused = FALSE;
+        self.isPaused = TRUE;
         
+    } else {
+        //player is paused and Buttons is pressed again
+        [self.playButton setBackgroundImage:[UIImage imageNamed:@"audioplayer_play.png"] forState:UIControlStateNormal];
+        [self.audioPlayer pauseAudio];
+        self.isPaused = FALSE;
     }
 }
 
