@@ -78,6 +78,11 @@
     }
 }
 
+-(IBAction)moodButtonPressed:(id)moodButton
+{
+    NSLog(@"Button Pressed");
+    return;
+}
 
 /*
  * Update the current time label display and

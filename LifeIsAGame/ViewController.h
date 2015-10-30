@@ -17,9 +17,12 @@
 @property (weak, nonatomic) IBOutlet UIButton *playButton;
 @property (weak, nonatomic) IBOutlet UILabel *duration;
 @property (weak, nonatomic) IBOutlet UILabel *timeElapsed;
+@property (weak, nonatomic) IBOutlet UIButton *moodButton;
 
 @property BOOL isPaused;
 @property BOOL scrubbing;
+
+@property NSString *mood;
 
 @property NSTimer *timer;
 
