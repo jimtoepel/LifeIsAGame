@@ -18,6 +18,8 @@
 @property (weak, nonatomic) IBOutlet UILabel *duration;
 @property (weak, nonatomic) IBOutlet UILabel *timeElapsed;
 @property (weak, nonatomic) IBOutlet UIButton *moodButton;
+@property (weak, nonatomic) IBOutlet UIButton *victoryButton;
+@property (weak, nonatomic) IBOutlet UIButton *challengeButton;
 
 @property BOOL isPaused;
 @property BOOL scrubbing;

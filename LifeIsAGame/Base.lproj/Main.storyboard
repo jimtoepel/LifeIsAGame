@@ -37,14 +37,14 @@
                                 <rect key="frame" x="94" y="50" width="55" height="21"/>
                                 <animations/>
                                 <fontDescription key="fontDescription" type="system" pointSize="10"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="MM:SS" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="26H-8J-Wx3">
                                 <rect key="frame" x="303" y="50" width="55" height="21"/>
                                 <animations/>
                                 <fontDescription key="fontDescription" type="system" pointSize="10"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cXb-fa-wl3" userLabel="LightRed">
@@ -68,7 +68,7 @@
                                 <animations/>
                                 <state key="normal" backgroundImage="victory.png"/>
                                 <connections>
-                                    <action selector="moodButtonPressed:" destination="BYZ-38-t0r" eventType="touchDown" id="DHX-53-WHJ"/>
+                                    <action selector="victoryButtonPressed:" destination="BYZ-38-t0r" eventType="touchDown" id="PLK-w0-V0Q"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jDt-OB-BL7" userLabel="Crunch">
@@ -76,7 +76,7 @@
                                 <animations/>
                                 <state key="normal" backgroundImage="onFire.png"/>
                                 <connections>
-                                    <action selector="moodButtonPressed:" destination="BYZ-38-t0r" eventType="touchDown" id="KwB-Mu-eKh"/>
+                                    <action selector="challengeButtonPressed:" destination="BYZ-38-t0r" eventType="touchDown" id="3QY-CV-xUm"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="o6D-8G-h3O" userLabel="LightYellow">

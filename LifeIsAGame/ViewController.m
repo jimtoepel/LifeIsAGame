@@ -84,6 +84,21 @@
     return;
 }
 
+-(IBAction)victoryButtonPressed:(id)victoryButton
+{
+    self.mood = @"win";
+    NSLog(@"Victory!, %@", self.mood);
+    return;
+}
+
+
+-(IBAction)challengeButtonPressed:(id)challengeButton
+{
+    self.mood = @"FIGHT";
+    NSLog(@"Are you asking for a challenge?, %@", self.mood);
+    return;
+}
+
 /*
  * Update the current time label display and
  * the current value of the slider
