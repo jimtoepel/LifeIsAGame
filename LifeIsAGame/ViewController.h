@@ -20,6 +20,8 @@
 @property (weak, nonatomic) IBOutlet UIButton *victoryButton;
 @property (weak, nonatomic) IBOutlet UIButton *challengeButton;
 @property (weak, nonatomic) IBOutlet UIImageView *currentMoodDisplay;
+@property (weak, nonatomic) IBOutlet UILabel *titleDisplay;
+
 
 @property BOOL isPaused;
 @property BOOL scrubbing;

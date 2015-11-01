@@ -17,7 +17,6 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.audioPlayer = [[FUNAudioPlayer alloc] init];
-    [self setupAudioPlayer:@"PyreLight"];
     [self updateMood:0];
     // Do any additional setup after loading the view, typically from a nib.
 }
@@ -28,11 +27,21 @@
     self.moodValue = self.moodValue + change;
     NSLog(@"Mood is now %i\n", self.moodValue);
     if (self.moodValue < 1) {
+        
         [self.currentMoodDisplay setImage:[UIImage imageNamed:@"lightGreen.png"]];
+        [self setupAudioPlayer:@"12 PM"];
+        [self.audioPlayer playAudio];
+
     } if (self.moodValue >= 1 && self.moodValue <= 4) {
+    
         [self.currentMoodDisplay setImage:[UIImage imageNamed:@"lightYellow.png"]];
+        [self setupAudioPlayer:@"PyreLight"];
+        [self.audioPlayer playAudio];
+    
     } if (self.moodValue >4 ) {
+        [self setupAudioPlayer:@"Being Chased by a Bee"];
         [self.currentMoodDisplay setImage:[UIImage imageNamed:@"lightRed.png"]];
+        [self.audioPlayer playAudio];    
     }
     
 }
@@ -60,6 +69,8 @@
     self.timeElapsed.text = @"0:00";
     
     self.duration.text = [NSString stringWithFormat:@"-%@", [self.audioPlayer timeFormat:[self.audioPlayer getAudioDuration]]];
+    
+    self.titleDisplay.text = filename;
     
 }
 
