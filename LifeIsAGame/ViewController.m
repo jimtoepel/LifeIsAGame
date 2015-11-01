@@ -18,7 +18,23 @@
     [super viewDidLoad];
     self.audioPlayer = [[FUNAudioPlayer alloc] init];
     [self setupAudioPlayer:@"PyreLight"];
+    [self updateMood:0];
     // Do any additional setup after loading the view, typically from a nib.
+}
+
+
+- (void)updateMood:(int)change
+{
+    self.moodValue = self.moodValue + change;
+    NSLog(@"Mood is now %i\n", self.moodValue);
+    if (self.moodValue < 1) {
+        [self.currentMoodDisplay setImage:[UIImage imageNamed:@"lightGreen.png"]];
+    } if (self.moodValue >= 1 && self.moodValue <= 4) {
+        [self.currentMoodDisplay setImage:[UIImage imageNamed:@"lightYellow.png"]];
+    } if (self.moodValue >4 ) {
+        [self.currentMoodDisplay setImage:[UIImage imageNamed:@"lightRed.png"]];
+    }
+    
 }
 
 
@@ -78,14 +94,10 @@
     }
 }
 
--(IBAction)moodButtonPressed:(id)moodButton
-{
-    NSLog(@"Button Pressed");
-    return;
-}
 
 -(IBAction)victoryButtonPressed:(id)victoryButton
 {
+    [self updateMood:-1];
     self.mood = @"win";
     NSLog(@"Victory!, %@", self.mood);
     return;
@@ -94,6 +106,7 @@
 
 -(IBAction)challengeButtonPressed:(id)challengeButton
 {
+    [self updateMood:1];
     self.mood = @"FIGHT";
     NSLog(@"Are you asking for a challenge?, %@", self.mood);
     return;

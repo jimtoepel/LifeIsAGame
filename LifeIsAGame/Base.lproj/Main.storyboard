@@ -47,22 +47,6 @@
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cXb-fa-wl3" userLabel="LightRed">
-                                <rect key="frame" x="212" y="157" width="72" height="72"/>
-                                <animations/>
-                                <state key="normal" backgroundImage="lightRed.png"/>
-                                <connections>
-                                    <action selector="moodButtonPressed:" destination="BYZ-38-t0r" eventType="touchDown" id="KX7-cX-M4V"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yVQ-k7-G6p" userLabel="LightGreen">
-                                <rect key="frame" x="20" y="157" width="72" height="72"/>
-                                <animations/>
-                                <state key="normal" backgroundImage="lightGreen.png"/>
-                                <connections>
-                                    <action selector="moodButtonPressed:" destination="BYZ-38-t0r" eventType="touchDown" id="Wkp-QM-t7g"/>
-                                </connections>
-                            </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ei4-Ql-vtr" userLabel="Victory">
                                 <rect key="frame" x="64" y="264" width="72" height="72"/>
                                 <animations/>
@@ -79,19 +63,16 @@
                                     <action selector="challengeButtonPressed:" destination="BYZ-38-t0r" eventType="touchDown" id="3QY-CV-xUm"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="o6D-8G-h3O" userLabel="LightYellow">
-                                <rect key="frame" x="117" y="157" width="72" height="72"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="lightGreen.png" translatesAutoresizingMaskIntoConstraints="NO" id="yt9-k9-Uia" userLabel="MoodDisplay">
+                                <rect key="frame" x="113" y="143" width="72" height="72"/>
                                 <animations/>
-                                <state key="normal" backgroundImage="lightYellow.png"/>
-                                <connections>
-                                    <action selector="moodButtonPressed:" destination="BYZ-38-t0r" eventType="touchDown" id="HGW-SO-X7S"/>
-                                </connections>
-                            </button>
+                            </imageView>
                         </subviews>
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
                     <connections>
+                        <outlet property="currentMoodDisplay" destination="yt9-k9-Uia" id="N22-Ml-Tki"/>
                         <outlet property="currentTimeSlider" destination="PMC-2P-5Z4" id="0mi-LY-cba"/>
                         <outlet property="duration" destination="26H-8J-Wx3" id="Gq7-C4-yM3"/>
                         <outlet property="playButton" destination="wdu-3d-dGL" id="s15-ch-Ech"/>
@@ -106,8 +87,6 @@
     <resources>
         <image name="audioplayer_play.png" width="256" height="256"/>
         <image name="lightGreen.png" width="256" height="256"/>
-        <image name="lightRed.png" width="256" height="256"/>
-        <image name="lightYellow.png" width="256" height="256"/>
         <image name="onFire.png" width="256" height="256"/>
         <image name="victory.png" width="256" height="256"/>
     </resources>
