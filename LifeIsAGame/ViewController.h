@@ -21,6 +21,7 @@
 @property (weak, nonatomic) IBOutlet UIButton *challengeButton;
 @property (weak, nonatomic) IBOutlet UIImageView *currentMoodDisplay;
 @property (weak, nonatomic) IBOutlet UILabel *titleDisplay;
+@property (weak, nonatomic) IBOutlet UILabel *currentHour;
 
 
 @property BOOL isPaused;
