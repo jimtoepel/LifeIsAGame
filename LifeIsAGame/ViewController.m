@@ -20,7 +20,7 @@
     [self updateMood:0];
     // Do any additional setup after loading the view, typically from a nib.
     NSDateFormatter *dateFormatter=[[NSDateFormatter alloc] init];
-    [dateFormatter setDateFormat:@"hh"];
+    [dateFormatter setDateFormat:@"hh a"];
     NSLog(@"%@",[dateFormatter stringFromDate:[NSDate date]]);
     self.currentHour.text = [dateFormatter stringFromDate:[NSDate date]];
 }
