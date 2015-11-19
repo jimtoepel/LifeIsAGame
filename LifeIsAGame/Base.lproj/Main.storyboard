@@ -115,13 +115,13 @@
                     </view>
                     <connections>
                         <outlet property="currentHour" destination="VOc-VY-hET" id="oX6-6S-SNo"/>
+                        <outlet property="currentMonth" destination="fqW-4C-YGD" id="GZR-m5-B6y"/>
                         <outlet property="currentMoodDisplay" destination="yt9-k9-Uia" id="N22-Ml-Tki"/>
                         <outlet property="currentTimeSlider" destination="PMC-2P-5Z4" id="0mi-LY-cba"/>
                         <outlet property="duration" destination="26H-8J-Wx3" id="Gq7-C4-yM3"/>
                         <outlet property="playButton" destination="wdu-3d-dGL" id="s15-ch-Ech"/>
                         <outlet property="timeElapsed" destination="ACR-JZ-ES5" id="DF4-9R-itl"/>
                         <outlet property="titleDisplay" destination="9VV-7z-UsG" id="KYg-1N-oxG"/>
-                        <outlet property="weatherReport" destination="fqW-4C-YGD" id="Sb7-IV-Mbn"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
