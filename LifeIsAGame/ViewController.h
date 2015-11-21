@@ -23,6 +23,8 @@
 @property (weak, nonatomic) IBOutlet UILabel *titleDisplay;
 @property (weak, nonatomic) IBOutlet UILabel *currentHour;
 @property (weak, nonatomic) IBOutlet UILabel *currentMonth;
+@property (weak, nonatomic) IBOutlet UILabel *currentSeason;
+@property (weak, nonatomic) IBOutlet UILabel *currentWeather;
 
 
 @property BOOL isPaused;
