@@ -25,7 +25,6 @@
 @property (weak, nonatomic) IBOutlet UILabel *currentMonth;
 @property (weak, nonatomic) IBOutlet UILabel *currentSeason;
 @property (weak, nonatomic) IBOutlet UILabel *currentWeather;
-@property (weak, nonatomic) IBOutlet UIButton *loopButton;
 
 
 

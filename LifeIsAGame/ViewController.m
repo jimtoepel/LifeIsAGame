@@ -7,6 +7,7 @@
 //
 
 #import "ViewController.h"
+NSString *currentHour;
 
 @interface ViewController ()
 
@@ -30,27 +31,22 @@
     NSString *currentMonthText = [dateFormatter stringFromDate:[NSDate date]];
     self.currentMonth.text = currentMonthText;
     
-    
-    [self updateHour];
+    [self updateTime];
 }
 
--(void)updateLooping
-{
-    if (!self.looping) {
-        [self.loopButton setBackgroundImage:[UIImage imageNamed:@"loop_on"] forState:UIControlStateNormal];
-        self.looping = TRUE;
-    } else {
-        [self.loopButton setBackgroundImage:[UIImage imageNamed:@"loop_off"] forState:UIControlStateNormal];
-        self.looping = FALSE;
-    }
-}
 
-- (void)updateHour
+- (void)updateTime
 {
     NSDateFormatter *dateFormatter=[[NSDateFormatter alloc] init];
     [dateFormatter setDateFormat:@"hh a"];
+    
     NSString *hour = [NSString stringWithFormat:@"%@", [dateFormatter stringFromDate:[NSDate date]]];
-    [self setupAudioPlayer:hour];
+    if (currentHour != hour) {
+        // This should be a separate call!
+        [self setupAudioPlayer:hour];
+        [self.audioPlayer playAudio];
+        currentHour = hour;
+    }
     
 }
 
@@ -136,10 +132,6 @@
     }
 }
 
-- (IBAction)loopPressed:(id)loopButton;
-{
-    [self updateLooping];
-}
 
 
 -(IBAction)victoryButtonPressed:(id)victoryButton
@@ -172,6 +164,11 @@
     }
     self.timeElapsed.text = [NSString stringWithFormat:@"%@", [self.audioPlayer timeFormat:[self.audioPlayer getCurrentAudioTime]]];
     self.duration.text = [NSString stringWithFormat:@"-%@", [self.audioPlayer timeFormat:[self.audioPlayer getAudioDuration] - [self.audioPlayer getCurrentAudioTime]]];
+    [self updateTime];
+    // Update Hour + Month
+    // If Hour changes, play "Celebration"
+    // And change to new audio
+    
 }
 
 
