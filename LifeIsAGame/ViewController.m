@@ -21,6 +21,12 @@ NSString *currentHour;
     [self updateMood:0];
     // Do any additional setup after loading the view, typically from a nib.
     
+    [self updateTime];
+}
+
+
+- (void)updateTime
+{
     NSDateFormatter *dateFormatter=[[NSDateFormatter alloc] init];
     [dateFormatter setDateFormat:@"hh a"];
     
@@ -31,24 +37,26 @@ NSString *currentHour;
     NSString *currentMonthText = [dateFormatter stringFromDate:[NSDate date]];
     self.currentMonth.text = currentMonthText;
     
-    [self updateTime];
-}
-
-
-- (void)updateTime
-{
-    NSDateFormatter *dateFormatter=[[NSDateFormatter alloc] init];
     [dateFormatter setDateFormat:@"hh a"];
     
     NSString *hour = [NSString stringWithFormat:@"%@", [dateFormatter stringFromDate:[NSDate date]]];
     if (currentHour != hour) {
         // This should be a separate call!
-        [self setupAudioPlayer:hour];
-        [self.audioPlayer playAudio];
+        [self newHour:hour isPaused:_isPaused];
         currentHour = hour;
     }
     
 }
+
+
+-(void)newHour:(NSString*)hour isPaused:(BOOL)paused
+{
+    [self setupAudioPlayer:hour];
+    if (paused) {
+        [self.audioPlayer playAudio];
+    }
+}
+
 
 - (void)updateMood:(int)change
 {
