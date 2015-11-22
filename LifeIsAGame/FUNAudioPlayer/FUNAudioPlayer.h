@@ -11,8 +11,10 @@
 
 @interface FUNAudioPlayer : UIViewController
 
+
+
 @property (nonatomic, retain) AVAudioPlayer *audioPlayer;
-@property (nonatomic) NSInteger numberOfLoops;
+
 
 - (void)initPlayer:(NSString*) audioFile fileExtension:(NSString*)fileExtension;
 - (void)playAudio;
@@ -21,6 +23,7 @@
 - (float)getAudioDuration;
 - (NSString*)timeFormat:(float)value;
 - (NSTimeInterval)getCurrentAudioTime;
-- (void)setLooping:(BOOL)loop;
+- (void)toggleLooping:(BOOL)loop;
+
 
 @end

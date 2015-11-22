@@ -25,17 +25,19 @@
 @property (weak, nonatomic) IBOutlet UILabel *currentMonth;
 @property (weak, nonatomic) IBOutlet UILabel *currentSeason;
 @property (weak, nonatomic) IBOutlet UILabel *currentWeather;
+@property (weak, nonatomic) IBOutlet UIButton *loopButton;
+
+
 
 
 @property BOOL isPaused;
 @property BOOL scrubbing;
+@property BOOL looping;
 
 @property NSString *mood;
 @property int moodValue;
 
 @property NSTimer *timer;
-
-
 
 @end
 

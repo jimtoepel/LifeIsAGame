@@ -34,6 +34,17 @@
     [self updateHour];
 }
 
+-(void)updateLooping
+{
+    if (!self.looping) {
+        [self.loopButton setBackgroundImage:[UIImage imageNamed:@"loop_on"] forState:UIControlStateNormal];
+        self.looping = TRUE;
+    } else {
+        [self.loopButton setBackgroundImage:[UIImage imageNamed:@"loop_off"] forState:UIControlStateNormal];
+        self.looping = FALSE;
+    }
+}
+
 - (void)updateHour
 {
     NSDateFormatter *dateFormatter=[[NSDateFormatter alloc] init];
@@ -123,6 +134,11 @@
         [self.audioPlayer pauseAudio];
         self.isPaused = FALSE;
     }
+}
+
+- (IBAction)loopPressed:(id)loopButton;
+{
+    [self updateLooping];
 }
 
 

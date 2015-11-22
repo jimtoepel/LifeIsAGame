@@ -48,7 +48,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ei4-Ql-vtr" userLabel="Victory">
-                                <rect key="frame" x="64" y="360" width="72" height="72"/>
+                                <rect key="frame" x="326" y="411" width="72" height="72"/>
                                 <animations/>
                                 <state key="normal" backgroundImage="victory.png"/>
                                 <connections>
@@ -56,7 +56,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jDt-OB-BL7" userLabel="Crunch">
-                                <rect key="frame" x="161" y="360" width="72" height="72"/>
+                                <rect key="frame" x="326" y="319" width="72" height="72"/>
                                 <animations/>
                                 <state key="normal" backgroundImage="onFire.png"/>
                                 <connections>
@@ -64,7 +64,7 @@
                                 </connections>
                             </button>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="lightGreen.png" translatesAutoresizingMaskIntoConstraints="NO" id="yt9-k9-Uia" userLabel="MoodDisplay">
-                                <rect key="frame" x="113" y="239" width="72" height="72"/>
+                                <rect key="frame" x="326" y="227" width="72" height="72"/>
                                 <animations/>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Now Playing:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="S7t-OV-4ah">
@@ -137,6 +137,14 @@
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Omv-hb-I1P" userLabel="Loop Button">
+                                <rect key="frame" x="20" y="108" width="72" height="72"/>
+                                <animations/>
+                                <state key="normal" backgroundImage="loop_on.png"/>
+                                <connections>
+                                    <action selector="loopPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="xrO-kI-6q0"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
@@ -149,6 +157,7 @@
                         <outlet property="currentTimeSlider" destination="PMC-2P-5Z4" id="0mi-LY-cba"/>
                         <outlet property="currentWeather" destination="i2L-mj-fDL" id="vuA-pa-Ltl"/>
                         <outlet property="duration" destination="26H-8J-Wx3" id="Gq7-C4-yM3"/>
+                        <outlet property="loopButton" destination="Omv-hb-I1P" id="zvO-gA-qxL"/>
                         <outlet property="playButton" destination="wdu-3d-dGL" id="s15-ch-Ech"/>
                         <outlet property="timeElapsed" destination="ACR-JZ-ES5" id="DF4-9R-itl"/>
                         <outlet property="titleDisplay" destination="9VV-7z-UsG" id="KYg-1N-oxG"/>
@@ -162,6 +171,7 @@
     <resources>
         <image name="audioplayer_play.png" width="256" height="256"/>
         <image name="lightGreen.png" width="256" height="256"/>
+        <image name="loop_on.png" width="1066" height="1066"/>
         <image name="onFire.png" width="256" height="256"/>
         <image name="victory.png" width="256" height="256"/>
     </resources>
