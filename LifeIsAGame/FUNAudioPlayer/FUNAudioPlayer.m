@@ -19,6 +19,7 @@
 
 
 - (void)playAudio {
+    self.audioPlayer.numberOfLoops = -1;
     [self.audioPlayer play];
 }
 
@@ -55,6 +56,13 @@
 
 - (float)getAudioDuration {
     return [self.audioPlayer duration];
+}
+
+- (void)setLooping:(BOOL)loop {
+    if (! loop ) {
+        self.audioPlayer.numberOfLoops = -1;
+    } else
+        self.audioPlayer.numberOfLoops = 0;
 }
 
 @end

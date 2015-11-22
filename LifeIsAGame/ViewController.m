@@ -27,9 +27,21 @@
     self.currentHour.text = [dateFormatter stringFromDate:[NSDate date]];
     
     [dateFormatter setDateFormat:@"MMM"];
-    self.currentMonth.text = [dateFormatter stringFromDate:[NSDate date]];
+    NSString *currentMonthText = [dateFormatter stringFromDate:[NSDate date]];
+    self.currentMonth.text = currentMonthText;
+    
+    
+    [self updateHour];
 }
 
+- (void)updateHour
+{
+    NSDateFormatter *dateFormatter=[[NSDateFormatter alloc] init];
+    [dateFormatter setDateFormat:@"hh a"];
+    NSString *hour = [NSString stringWithFormat:@"%@", [dateFormatter stringFromDate:[NSDate date]]];
+    [self setupAudioPlayer:hour];
+    
+}
 
 - (void)updateMood:(int)change
 {
@@ -74,7 +86,6 @@
     
     // init the current timedisplay and the lavels. if a current time was stored
     // for this player then take it and update the time display
-    
     self.timeElapsed.text = @"0:00";
     
     self.duration.text = [NSString stringWithFormat:@"-%@", [self.audioPlayer timeFormat:[self.audioPlayer getAudioDuration]]];
