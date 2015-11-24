@@ -18,7 +18,7 @@ NSString *currentHour;
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.audioPlayer = [[FUNAudioPlayer alloc] init];
-    [self updateMood:0];
+    [self updateMood:2];
     // Do any additional setup after loading the view, typically from a nib.
     
     [self updateTime];
@@ -30,7 +30,7 @@ NSString *currentHour;
     NSDateFormatter *dateFormatter=[[NSDateFormatter alloc] init];
     [dateFormatter setDateFormat:@"hh a"];
     
-    NSLog(@"%@",[dateFormatter stringFromDate:[NSDate date]]);
+//    NSLog(@"%@",[dateFormatter stringFromDate:[NSDate date]]);
     self.currentHour.text = [dateFormatter stringFromDate:[NSDate date]];
     
     [dateFormatter setDateFormat:@"MMM"];
@@ -63,21 +63,20 @@ NSString *currentHour;
     self.moodValue = self.moodValue + change;
     NSLog(@"Mood is now %i\n", self.moodValue);
     if (self.moodValue < 1) {
-        
+        NSLog(@"Adding \"- Snowy\" to the filename");
         [self.currentMoodDisplay setImage:[UIImage imageNamed:@"lightGreen.png"]];
-        [self setupAudioPlayer:@"12 PM"];
-        [self.audioPlayer playAudio];
+//        [self setupAudioPlayer:@"12 PM"];
+//        [self.audioPlayer playAudio];
 
     } if (self.moodValue >= 1 && self.moodValue <= 4) {
-    
+        NSLog(@"Adding \"Nothing\" to the filename");
         [self.currentMoodDisplay setImage:[UIImage imageNamed:@"lightYellow.png"]];
-        [self setupAudioPlayer:@"PyreLight"];
-        [self.audioPlayer playAudio];
+//        [self setupAudioPlayer:@"PyreLight"];
+//        [self.audioPlayer playAudio];
     
     } if (self.moodValue >4 ) {
-        [self setupAudioPlayer:@"Being Chased by a Bee"];
+        NSLog(@"Adding \"- Rainy\" to the filename");
         [self.currentMoodDisplay setImage:[UIImage imageNamed:@"lightRed.png"]];
-        [self.audioPlayer playAudio];    
     }
     
 }

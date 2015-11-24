@@ -41,7 +41,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ei4-Ql-vtr" userLabel="Victory">
-                                <rect key="frame" x="20" y="405" width="72" height="72"/>
+                                <rect key="frame" x="20" y="219" width="72" height="72"/>
                                 <animations/>
                                 <state key="normal" backgroundImage="victory.png"/>
                                 <connections>
@@ -49,17 +49,13 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jDt-OB-BL7" userLabel="Crunch">
-                                <rect key="frame" x="20" y="313" width="72" height="72"/>
+                                <rect key="frame" x="223" y="219" width="72" height="72"/>
                                 <animations/>
                                 <state key="normal" backgroundImage="onFire.png"/>
                                 <connections>
                                     <action selector="challengeButtonPressed:" destination="BYZ-38-t0r" eventType="touchDown" id="3QY-CV-xUm"/>
                                 </connections>
                             </button>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="lightGreen.png" translatesAutoresizingMaskIntoConstraints="NO" id="yt9-k9-Uia" userLabel="MoodDisplay">
-                                <rect key="frame" x="20" y="221" width="72" height="72"/>
-                                <animations/>
-                            </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Now Playing:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="S7t-OV-4ah">
                                 <rect key="frame" x="94" y="79" width="63" height="21"/>
                                 <animations/>
@@ -137,6 +133,10 @@
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="lightGreen.png" translatesAutoresizingMaskIntoConstraints="NO" id="yt9-k9-Uia" userLabel="MoodDisplay">
+                                <rect key="frame" x="121" y="219" width="72" height="72"/>
+                                <animations/>
+                            </imageView>
                         </subviews>
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
@@ -156,7 +156,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="293" y="387"/>
+            <point key="canvasLocation" x="387" y="387"/>
         </scene>
     </scenes>
     <resources>
